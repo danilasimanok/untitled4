@@ -12,10 +12,7 @@ public class Player {
         this.hp=hp;
         this.inv=new boolean[kol];
     }
-    public int decide(int kolVar){
-        int x;
-        do x=new Scanner(System.in).nextInt();
-        while (!(x>0&&x<=kolVar));
-        return x;
+    public int decide(){
+        return new Scanner(System.in).nextInt();
     }
 }

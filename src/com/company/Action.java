@@ -1,47 +1,41 @@
 package com.company;
 
+import java.io.File;
+import java.util.LinkedList;
+import java.util.Scanner;
+
 /**
- * Created by Мария on 22.01.2017.
+ * Created by Мария on 24.01.2017.
  */
 public class Action {
-    String actionMessage,newText,falseMessage,falsenewText;
-    int dhp,dinv,nextEvent,provhp,provinv,falseEvent,falsedhp,falsedinv;
-    boolean znprovhp,vinv;
-    //znprovhp - если истина, то смотрится hp>=provhp, иначе hp<=provhp
-    //vinv - если истина, то смотрится, есть ли вещь, иначе смотрится нет ли вещи
-    public Action(String actionMessage,String newText,String falseMessage,String falsenewText,int dhp,int dinv,int nextEvent,int provhp,int provinv,int falseEvent,int falsedhp,int falsedinv,boolean znprovhp,boolean vinv){
-        this.actionMessage=actionMessage;
-        this.falseMessage=falseMessage;
-        this.falsenewText=falsenewText;
-        this.dhp=dhp;
-        this.dinv=dinv;
-        this.newText=newText;
-        this.nextEvent=nextEvent;
-        this.provhp=provhp;
-        this.provinv=provinv;
-        this.falseEvent=falseEvent;
-        this.falsedhp=falsedhp;
-        this.falsedinv=falsedinv;
-        this.znprovhp=znprovhp;
-        this.vinv=vinv;
+    LinkedList<String>newText=new LinkedList<>();
+    String actionMessage;
+    int dinv,dhp,nextScene;
+    public Action(String s){
+        File f=new File(s);
+        try{
+            Scanner sc=new Scanner(f);
+            this.dinv=sc.nextInt();
+            this.dhp=sc.nextInt();
+            this.nextScene=sc.nextInt();
+            this.actionMessage=sc.nextLine();
+            while (sc.hasNextLine())this.newText.add(sc.nextLine());
+            sc.close();
+        }
+        catch (Exception e){
+            System.out.println("Туши свет, бросай гранату");
+        }
     }
-    public int execute(Player player,MyEvent event){
+    public void show(){
+        System.out.println(this.dinv+" "+this.dhp+" "+this.nextScene);
+        System.out.println(this.actionMessage);
+        for(String s:this.newText) System.out.println(s);
+    }
+    public int execute(Player player,Scene scene){
         System.out.println(this.actionMessage);
         player.hp+=this.dhp;
-        if(this.dinv>=0)player.inv[dinv]=!player.inv[this.dinv];
-        if(this.newText!="")event.text=this.newText;
-        return this.nextEvent;
-    }
-    public boolean hpprov(int hp){
-        boolean gotv;
-        if(this.znprovhp)gotv=(hp>=this.provhp);
-        else gotv=(hp<=this.provhp);
-        return gotv;
-    }
-    public boolean invprov(boolean[] inv){
-        boolean gotov;
-        if(this.vinv)gotov=inv[this.provinv];
-        else gotov=!inv[this.provinv];
-        return  gotov;
+        if(this.dinv>=0)player.inv[this.dinv]=!player.inv[this.dinv];
+        if(!this.newText.isEmpty())scene.text=this.newText;
+        return this.nextScene;
     }
 }
