@@ -18,12 +18,13 @@ public class Trans {
         for(int i=0;i<this.thing.length;i++)if(this.thing[i].equals(s))result=i;
         return result;
     }
-    public Trans(int x, String s){
-        this.thing=new String[x];
+    public Trans(String s){
         File f=new File(s);
         try {
             Scanner sc=new Scanner(f);
-            for(int i=0;i<x;i++)this.thing[i]=new String(sc.nextLine());
+            this.thing=new String[sc.nextInt()];
+            String ns=sc.nextLine();
+            for(int i=0;i<this.thing.length;i++)this.thing[i]=new String(sc.nextLine());
             sc.close();
         }
         catch (Exception e){

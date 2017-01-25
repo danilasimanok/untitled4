@@ -13,6 +13,7 @@ public class Adventures {
         try {
             Scanner sc=new Scanner(f);
             this.actions=new Action[sc.nextInt()];
+            String s=sc.nextLine();
             for (int i=0;i<this.actions.length;i++)
                 this.actions[i]=new Action(sc.nextLine());
             sc.close();

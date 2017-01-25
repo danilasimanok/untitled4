@@ -37,8 +37,4 @@ public class Proverka {
         if(f)return this.tAction;
         else return this.fAction;
     }
-
-    public void doAction(Player player) {
-
-    }
 }
