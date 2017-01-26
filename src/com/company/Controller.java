@@ -16,12 +16,12 @@ public class Controller {
         this.trans=new Trans(transName);
     }
     public void start(int nomStartScene){
-        int nAct=this.story.story[nomStartScene].listen(this.player);
+        int nAct=this.story.story[nomStartScene].listen(this.player,this.trans);
         this.next=this.adventures.actions[nAct].execute(this.player,this.story.story[nomStartScene]);
     }
     public void play(){
         this.pl=this.next;
-        int nAct=this.story.story[this.pl].listen(this.player);
+        int nAct=this.story.story[this.pl].listen(this.player,this.trans);
         this.next=this.adventures.actions[nAct].execute(this.player,this.story.story[pl]);
     }
     public boolean endLi(){

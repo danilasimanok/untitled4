@@ -34,13 +34,13 @@ public class Scene {
         for(Proverka proverka:this.choices)proverka.show();
         for(String s:this.text) System.out.println(s);
     }
-    public int listen(Player player){
-        if(this.fight!=null)fight.fight(player);
+    public int listen(Player player,Trans trans){
+        if(this.fight!=null)fight.fight(player,trans);
         if(player.hp<=0)return -10;
         for(String s:this.text) System.out.println(s);
         int x;
         do {
-            x=new Scanner(System.in).nextInt();
+            x=player.decide();
         }while (!(x-1>=0&&x<this.choices.length));
         return this.choices[x-1].proverka(player);
     }

@@ -33,7 +33,10 @@ public class Fight {
         for(String s:this.descr) System.out.println(s);
     }
 
-    public void fight(Player player) {
+    public void fight(Player player,Trans trans) {
+        int plDmg=5+trans.plusDmg(player);
+        System.out.println(this.ennemyName);
+        for(String s:this.descr) System.out.println(s);
 
     }
 }
