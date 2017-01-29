@@ -1,5 +1,5 @@
 ﻿no
 2
-g://test//aprov.txt
-g://test//bprov.txt
+src/test/aprov.txt
+src/test/bprov.txt
 Pervaya scena nach text.

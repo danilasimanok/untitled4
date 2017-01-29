@@ -1,5 +1,5 @@
 ﻿no
 2
-g://test//cprov.txt
-g://test//dprov.txt
+src/test/cprov.txt
+src/test/dprov.txt
 Vtoraya scena nach text.
