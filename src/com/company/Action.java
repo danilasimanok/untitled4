@@ -23,7 +23,7 @@ public class Action {
             sc.close();
         }
         catch (Exception e){
-            System.out.println("Туши свет, бросай гранату");
+            System.out.println("Туши свет, бросай гранату"+e);
         }
     }
     public void show(){

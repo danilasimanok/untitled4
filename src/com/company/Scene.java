@@ -26,17 +26,17 @@ public class Scene {
             sc.close();
         }
         catch (Exception e){
-            System.out.println("YEE");
+            System.out.println("YEE"+e);
         }
     }
     public void show(){
-        this.fight.show();
+        //this.fight.show();
         for(Proverka proverka:this.choices)proverka.show();
         for(String s:this.text) System.out.println(s);
     }
     public int listen(Player player,Trans trans){
         if(this.fight!=null)fight.fight(player,trans);
-        if(player.hp<=0)return -10;
+        if(player.hp<=0)return -1;
         for(String s:this.text) System.out.println(s);
         int x;
         do {

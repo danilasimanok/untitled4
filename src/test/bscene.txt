@@ -1,0 +1,5 @@
+﻿no
+2
+g://test//cprov.txt
+g://test//dprov.txt
+Vtoraya scena nach text.

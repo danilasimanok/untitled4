@@ -32,8 +32,10 @@ public class Proverka {
         boolean f;
         if(this.bolsheHp)f=player.hp>=this.provHp;
         else f=player.hp<=this.provHp;
-        if(this.vInv)f=f&&player.inv[this.provInv];
-        else f=f&&(!player.inv[this.provInv]);
+        if(this.provInv>=0){
+            if(this.vInv)f=f&&player.inv[this.provInv];
+            else f=f&&(!player.inv[this.provInv]);
+        }
         if(f)return this.tAction;
         else return this.fAction;
     }
