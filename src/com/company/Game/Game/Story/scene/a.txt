@@ -1,0 +1,10 @@
+﻿no
+3
+game//story//scene//prov//aaprov.txt
+game//story//scene//prov//abprov.txt
+game//story//scene//prov//acprov.txt
+Вы находитесь в неизвестном здании. От вас в трех
+различных направлениях ведут три коридора.
+1)Пойти налево
+2)Пойти направо
+3)Пойти прямо

@@ -1,5 +1,0 @@
-﻿no
-2
-src/test/aprov.txt
-src/test/bprov.txt
-Pervaya scena nach text.

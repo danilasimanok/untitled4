@@ -15,6 +15,7 @@ public class Action {
         File f=new File(s);
         try{
             Scanner sc=new Scanner(f);
+            sc.nextLine();
             this.dinv=sc.nextInt();
             this.dhp=sc.nextInt();
             this.nextScene=sc.nextInt();

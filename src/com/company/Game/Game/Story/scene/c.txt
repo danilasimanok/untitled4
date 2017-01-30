@@ -1,0 +1,7 @@
+﻿no
+2
+game//story//scene//prov//caprov.txt
+game//story//scene//prov//cbprov.txt
+Здесь чертовски темно! Ничего не видно. Совсем.
+1)Искать что-то в темноте
+2)Тихо ретироваться

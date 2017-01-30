@@ -1,5 +1,0 @@
-﻿4
-src/test/aact.txt
-src/test/bact.txt
-src/test/cact.txt
-src/test/dact.txt

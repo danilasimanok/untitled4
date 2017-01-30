@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.File;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -12,14 +13,18 @@ public class Story {
         try {
             File f=new File(s);
             Scanner sc=new Scanner(f);
-            this.story=new Scene[sc.nextInt()];
-            String ns=sc.nextLine();
+            //sc.useLocale(Locale.);
+            sc.nextLine();
+            int n = sc.nextInt();
+            this.story=new Scene[n];
+            sc.nextLine();
             for(int i=0;i<this.story.length;i++)
                 this.story[i]=new Scene(sc.nextLine());
             sc.close();
         }
         catch (Exception e){
-            System.out.println("NOOOOOO!");
+            System.out.println(s);
+            e.printStackTrace();
         }
     }
     public void show(){

@@ -13,6 +13,7 @@ public class Proverka {
         File f=new File(s);
         try {
             Scanner sc=new Scanner(f);
+            sc.nextLine();
             this.vInv=sc.nextBoolean();
             this.provInv=sc.nextInt();
             this.bolsheHp=sc.nextBoolean();

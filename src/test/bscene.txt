@@ -1,5 +1,0 @@
-﻿no
-2
-src/test/cprov.txt
-src/test/dprov.txt
-Vtoraya scena nach text.

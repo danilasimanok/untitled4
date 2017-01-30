@@ -15,6 +15,7 @@ public class Scene {
         File f=new File(s);
         try{
             Scanner sc=new Scanner(f);
+            sc.nextLine();
             String ns=sc.nextLine();
             if(ns.equals("no"))this.fight=null;
             else this.fight=new Fight(ns);
@@ -41,7 +42,7 @@ public class Scene {
         int x;
         do {
             x=player.decide();
-        }while (!(x-1>=0&&x<this.choices.length));
+        }while (!(x-1>=0&&x<=this.choices.length));
         return this.choices[x-1].proverka(player);
     }
 }

@@ -12,6 +12,7 @@ public class Adventures {
         File f=new File(fileName);
         try {
             Scanner sc=new Scanner(f);
+            sc.nextLine();
             this.actions=new Action[sc.nextInt()];
             String s=sc.nextLine();
             for (int i=0;i<this.actions.length;i++)

@@ -18,16 +18,19 @@ public class Controller {
     public void start(int nomStartScene){
         int nAct=this.story.story[nomStartScene].listen(this.player,this.trans);
         this.next=this.adventures.actions[nAct].execute(this.player,this.story.story[nomStartScene]);
+        System.out.println(this.next);
     }
     public void play(){
         this.pl=this.next;
         int nAct=this.story.story[this.pl].listen(this.player,this.trans);
         this.next=this.adventures.actions[nAct].execute(this.player,this.story.story[pl]);
+        System.out.println(this.pl+" "+this.next);
     }
     public boolean endLi(){
         boolean f;
-        f=this.player.hp<=0;
-        f=f&&(this.next==-1);
+        f=this.player.hp>0;
+        if(!f) System.out.println("lol");
+        f=f&&(!(this.next==-1));
         return f;
     }
 }

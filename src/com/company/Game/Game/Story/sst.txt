@@ -1,0 +1,8 @@
+﻿7
+game//story//scene//startscene.txt
+game//story//scene//a.txt
+game//story//scene//b.txt
+game//story//scene//c.txt
+game//story//scene//d.txt
+game//story//scene//e.txt
+game//story//scene//finscene.txt

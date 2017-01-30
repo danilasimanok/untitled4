@@ -1,0 +1,17 @@
+﻿16
+game//adven//act//a.txt
+game//adven//act//b.txt
+game//adven//act//c.txt
+game//adven//act//d.txt
+game//adven//act//e.txt
+game//adven//act//f.txt
+game//adven//act//g.txt
+game//adven//act//h.txt
+game//adven//act//i.txt
+game//adven//act//j.txt
+game//adven//act//k.txt
+game//adven//act//l.txt
+game//adven//act//m.txt
+game//adven//act//n.txt
+game//adven//act//o.txt
+game//adven//act//p.txt
